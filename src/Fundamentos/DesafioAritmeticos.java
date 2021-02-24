@@ -56,8 +56,6 @@ public class DesafioAritmeticos {
 
         System.out.println("O resultado é " + resultado);
 
-
-
     }
 
 
