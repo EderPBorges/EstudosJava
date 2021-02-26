@@ -16,7 +16,7 @@ public class Unarios {
         System.out.println(b);
 
         System.out.println("Mini Desafio...");
-        System.out.println(++a == b--);
+        System.out.println(++a == b--); // incrementa com "pressa"
         System.out.println(a == b);
         System.out.println(a);
         System.out.println(b);
