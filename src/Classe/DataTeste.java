@@ -4,12 +4,13 @@ public class DataTeste {
 
     public static void main(String[] args) {
 
-        Data d1 = new Data();
+
+        Data d1 = new Data(13, "Janeiro", 1998); // utilizando construtor
         Data d2 = new Data();
 
-        d1.Dia = 13;
-        d1.Mes = "Janeiro";
-        d1.Ano = 1998;
+    //    d1.Dia = 13;
+    //    d1.Mes = "Janeiro";
+    //    d1.Ano = 1998;
 
         d2.Dia = 10;
         d2.Mes = "Março";
