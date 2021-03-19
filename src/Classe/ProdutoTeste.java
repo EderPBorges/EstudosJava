@@ -6,7 +6,7 @@ public class ProdutoTeste {
 
     public static void main(String[] args) {
 
-        // utilizando construtore
+        // utilizando construtor
         Produto p1 = new Produto("Notebook" , 4356.89, 0.25);
 
 
