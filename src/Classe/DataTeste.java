@@ -5,16 +5,17 @@ public class DataTeste {
     public static void main(String[] args) {
 
 
-        Data d1 = new Data(13, "Janeiro", 1998); // utilizando construtor
+        Data d1 = new Data(13, 01, 1998); // utilizando construtor
         Data d2 = new Data();
 
-    //    d1.Dia = 13;
-    //    d1.Mes = "Janeiro";
-    //    d1.Ano = 1998;
 
-        d2.Dia = 10;
-        d2.Mes = "Março";
-        d2.Ano = 2021;
+        //    d1.Dia = 13;
+        //    d1.Mes = "Janeiro";
+        //    d1.Ano = 1998;
+
+        d2.dia = 10;
+        d2.mes = 03;
+        d2.ano = 2021;
 
         String dataFormatada1 = d1.obterDataFormatada();
         // System.out.printf("Nascimento: Dia %d de %s de %d\n", d1.Dia, d1.Mes, d1.Ano );

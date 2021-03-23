@@ -1,32 +1,37 @@
 package Classe;
 
+import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
+
 public class Data {
 
-    int Dia;
-    String Mes;
-    int Ano;
+    int dia;
+    int mes;
+    int ano;
 
 
-    Data (){
-        Dia = 01;
-        Mes = "Janeiro";
-        Ano = 1970;
+    Data() {
+        //  dia = 01;
+        //  mes = 01;
+        //  ano = 1970;
+        this(1, 1, 1970); // chamar um construtor atravez de outro
     }
 
-    Data (int diaInformado, String mesInformado, int anoInformado){
-        Dia = diaInformado;
-        Mes = mesInformado;
-        Ano = anoInformado;
+    Data(int dia, int mes, int ano) {
+        this.dia = dia;
+        this.mes = mes;
+        this.ano = ano;
     }
 
 
-    String obterDataFormatada(){
-        return String.format("%d/%s/%d", Dia, Mes , Ano);
+    String obterDataFormatada() {
+        final String formato = "%d/%d/%d";
+        return String.format(formato, this.dia, mes, ano);
     }
 
     // \/ não é muito bom ( não funciona em outros ambientes/aplicaçoes )
-    void imprimirDataFormatada(){
-        System.out.println(obterDataFormatada());
+    void imprimirDataFormatada() {
+        System.out.println(this.obterDataFormatada());
     }
+
 
 }
