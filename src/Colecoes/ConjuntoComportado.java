@@ -24,6 +24,9 @@ public class ConjuntoComportado {
         nums.add(2);
         nums.add(120);
         nums.add(6);
+
+        // nums.get(1); não é possivel acessar pelo indice
+
         for(int n: nums){
             System.out.println(n);
         }
