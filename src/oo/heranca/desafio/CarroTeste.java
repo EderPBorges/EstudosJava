@@ -19,5 +19,8 @@ public class CarroTeste {
 
         System.out.println("A Velocidade atual do sonata é " + sonata.velocidadeAtual);
         System.out.println("A Velocidade atual da ferrari é " + ferrari.velocidadeAtual);
+
+        System.out.println("A velocidade maxima do sonata é " + sonata.VELOCIDADE_MAXIMA);
+        System.out.println("A velocidade maxima da ferrari é " + ferrari.VELOCIDADE_MAXIMA);
     }
 }

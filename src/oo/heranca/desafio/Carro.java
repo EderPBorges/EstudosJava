@@ -1,12 +1,21 @@
 package oo.heranca.desafio;
 
 public class Carro {
+    int VELOCIDADE_MAXIMA;
     int velocidadeAtual = 0;
     int frear = velocidadeAtual;
+    int delta = 5;
 
-    boolean acelerar (Carro carro, int acelerar){
-        carro.velocidadeAtual += acelerar;
-        return true;
+    Carro (int velocidadeMaxima){
+        VELOCIDADE_MAXIMA = velocidadeMaxima;
+    }
+
+    void acelerar (Carro carro, int acelerar){
+        if(velocidadeAtual + delta > VELOCIDADE_MAXIMA){
+            velocidadeAtual = VELOCIDADE_MAXIMA;
+        }else {
+            carro.velocidadeAtual += acelerar;
+        }
     }
     boolean desacelerar (Carro carro){
         if(carro.frear > 0){
