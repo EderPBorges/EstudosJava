@@ -3,7 +3,7 @@ package oo.heranca.desafio;
 public class Sonata extends Carro {
 
     public Sonata (){
-        super(200);
+        super(212);
     }
 
 }

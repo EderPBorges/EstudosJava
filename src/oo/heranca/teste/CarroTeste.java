@@ -6,25 +6,35 @@ import oo.heranca.desafio.Sonata;
 
 public class CarroTeste {
     public static void main(String[] args) {
-        Carro sonata = new Sonata();
-        Carro ferrari = new Ferrari();
+        Carro c1 = new Sonata();
 
-        sonata.acelerar(sonata, 5);
-        sonata.acelerar(sonata, 5);
-        sonata.acelerar(sonata, 5);
-       // sonata.acelerar(sonata, 5);
-       // sonata.desacelerar(sonata);
+        c1.acelerar();
+        System.out.println(c1);
 
-        ferrari.acelerar(ferrari, 15);
-        ferrari.acelerar(ferrari, 15);
-        ferrari.acelerar(ferrari, 15);
-       // ferrari.acelerar(ferrari, 15);
-       // ferrari.desacelerar(ferrari);
+        c1.acelerar();
+        System.out.println(c1);
 
-        System.out.println("A Velocidade atual do sonata é " + sonata.velocidadeAtual);
-        System.out.println("A Velocidade atual da ferrari é " + ferrari.velocidadeAtual);
+        c1.acelerar();
+        System.out.println(c1);
 
-        System.out.println("A velocidade maxima do sonata é " + sonata.VELOCIDADE_MAXIMA);
-        System.out.println("A velocidade maxima da ferrari é " + ferrari.VELOCIDADE_MAXIMA);
+        Ferrari c2 = new Ferrari(400);
+        c2.ligarTurbo();
+        c2.ligarARr();
+        c2.desligarAr();
+
+        c2.acelerar();
+        c2.frear();
+        System.out.println(c2);
+
+        c2.acelerar();
+        c2.frear();
+        System.out.println(c2);
+
+        c2.acelerar();
+        System.out.println(c2);
+
+
+
+
     }
 }
