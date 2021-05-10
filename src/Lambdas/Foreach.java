@@ -19,8 +19,18 @@ public class Foreach {
             System.out.println(nome + "!!!") //mais flexivel, pode personalizar
         );
 
-        System.out.println("\nMethod Reference...");
+        System.out.println("\nMethod Reference #01...");
         aprovados.forEach(System.out::println); // menos flexivel
 
+        System.out.println("\nLambda #02...");
+        aprovados.forEach(nome -> meuIMprimir(nome));
+
+        System.out.println("\nMethod Reference #02...");
+        aprovados.forEach(Foreach::meuIMprimir);
+
+    }
+
+    static void meuIMprimir(String nome){
+        System.out.println("Oi! meu nome é " + nome);
     }
 }
