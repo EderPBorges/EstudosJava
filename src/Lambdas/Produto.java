@@ -11,4 +11,9 @@ public class Produto extends Object{
         this.preco = preco;
         this.desconto = desconto;
     }
+
+    public String toString(){
+        double precoFinal = preco * (1 - desconto);
+        return nome + " Tem preço de R$" + preco;
+    }
 }
