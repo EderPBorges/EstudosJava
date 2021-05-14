@@ -31,16 +31,16 @@ public class Threads {
         t3.start();
 
 
-        static void trabalho3() {
-            for (int i = 0; i < 10; i++) {
-                System.out.println("Tarefa #03");
-                try {
-                    Thread.sleep(100);
-                }catch (Exception e){
-
-                }
-            }
-        }
+//        static void trabalho3() {
+//            for (int i = 0; i < 10; i++) {
+//                System.out.println("Tarefa #03");
+//                try {
+//                    Thread.sleep(100);
+//                }catch (Exception e){
+//
+//                }
+//            }
+//        }
 
 
     }
