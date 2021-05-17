@@ -1,6 +1,7 @@
 package Lambdas;
 
 import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.util.function.Function;
 import java.util.function.UnaryOperator;
 
@@ -14,7 +15,9 @@ public class Desafio {
          4. Arredondar: Deixar duas casas decimais
          5. Formatar: RS1234,56
          */
-        DecimalFormat df = new DecimalFormat("#.00");
+        DecimalFormatSymbols dfs = new DecimalFormatSymbols();
+        dfs.setDecimalSeparator('.');
+        DecimalFormat df = new DecimalFormat("#.00", dfs);
         Function<Produto, Double> precoFinal = produto -> produto.preco * (1 - produto.desconto);
         UnaryOperator<Double> impostoMunicipal = preco -> preco >= 2500 ? preco * 1.085 : preco;
         UnaryOperator<Double> frete = preco -> preco >= 3000 ? preco + 100 : preco + 50;
