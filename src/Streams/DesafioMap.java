@@ -18,10 +18,10 @@ public class DesafioMap {
 
         UnaryOperator<String> inverter = s -> new StringBuilder(s).reverse().toString();
 
-        Function<String, Integer> binarioParaInt = s -> Integer.parseInt(s, 2);
+        Function<String, Integer> binarioParaInt = s -> Integer.parseInt(s, 2); // se o segundo parametro for o 2, o java entende que você esta passando uma string binaria (ele espera um decimal)
 
         nums.stream()
-                .map(Integer::toBinaryString)
+                .map(Integer::toBinaryString) // nem precisou criar uma função
                 .map(inverter)
                 .map(binarioParaInt)
                 .forEach(System.out::println);
