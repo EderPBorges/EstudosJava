@@ -2,12 +2,12 @@ package Streams;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.BiFunction;
 import java.util.function.BinaryOperator;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
-public class Reduce2 {
-
+public class Reduce3 {
     public static void main(String[] args) {
 
         Aluno a1 = new Aluno("Ana", 7.1);
@@ -19,12 +19,18 @@ public class Reduce2 {
 
         Predicate<Aluno> aprovado = a -> a.nota >= 7;
         Function<Aluno, Double> apenasNota = a -> a.nota;
-        BinaryOperator<Double> somatorio = (a, b) -> a + b;
 
-        alunos.parallelStream()
+        BiFunction<Media, Double, Media> calcularMedia =
+                (media, nota) -> media.adicionar(nota);
+
+        BinaryOperator<Media> combinarMedia =
+                (m1, m2) -> Media.combinar(m1, m2);
+
+        Media media = alunos.parallelStream()
                 .filter(aprovado)
                 .map(apenasNota)
-                .reduce(somatorio)
-                .ifPresent(System.out::println);
+                .reduce(new Media(), calcularMedia, combinarMedia);
+
+        System.out.println("A media da turma e " + media.getValor());
     }
 }
