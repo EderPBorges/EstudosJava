@@ -1,17 +1,12 @@
 package Streams;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Function;
-import java.util.stream.Stream;
+import java.util.function.Predicate;
 
 public class DesafioFilter {
     public static void main(String[] args) {
-
-        Banco b1 = new Banco("Santander");
-        Banco b2 = new Banco("Itau");
-        Banco b3 = new Banco("Bradesco");
 
         Cliente c1 = new Cliente
                 ("João", "Private", 55.00, "Santander");
@@ -26,9 +21,22 @@ public class DesafioFilter {
         Cliente c6 = new Cliente
                 ("Larissa", "Comum", 500.00, "Itau");
 
-        List<Banco> bancos = Arrays.asList(b1, b2, b3);
         List<Cliente> clientes = Arrays.asList(c1, c2, c3, c4, c5, c6);
 
+        //filter
+        Predicate<Cliente> contasDiferenciadas = c -> c.tipoConta == "Private";
+        Predicate<Cliente> contasValiosas = c -> c.saldo >= 10000.00;
+
+        Function<Cliente, String> contatarClientes =
+                c -> "Atenção cliente " + c.nome +
+                        " Você foi selecionado como cliente especial do nosso banco "
+                + c.nomeBanco + "!!";
+
+        clientes.stream()
+                .filter(contasDiferenciadas)
+                .filter(contasValiosas)
+                .map(contatarClientes)
+                .forEach(System.out::println);
 
     }
 }
