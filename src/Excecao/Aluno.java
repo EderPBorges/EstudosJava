@@ -1,4 +1,4 @@
-package Streams;
+package Excecao;
 
 import java.util.Objects;
 
@@ -8,7 +8,7 @@ public class Aluno {
     final double nota;
     final boolean bomComportamento;
 
-    public Aluno (String nome, double nota){
+    public Aluno(String nome, double nota){
         this(nome, nota, true);
     }
 
