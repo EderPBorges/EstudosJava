@@ -19,7 +19,7 @@ public class ChecadaVsNaoChecada {
         System.out.println("Fim");
     }
 
-    // Excecão NÃI checada ou não verificada
+    // Excecão Não checada ou não verificada
     static void geraErro1() {
         throw new RuntimeException("Ocorreu um erro bem legal #01!");
     }
