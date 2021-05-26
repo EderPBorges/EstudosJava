@@ -1,4 +1,4 @@
-package Excecao.personalizadaB;
+package Excecao;
 
 import java.util.Scanner;
 
