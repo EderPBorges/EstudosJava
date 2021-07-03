@@ -11,9 +11,9 @@ public class CriarBanco {
         final String usuario = "root";
         final String senha = "root";
 
-       // Class.forName("com.mysql.jdbc.Driver");
         Connection conexao = DriverManager.getConnection(url, usuario, senha);
 
+        // Connection conexao = FabricaConexao.getConexao(); testando FabricaConexao
         Statement stmt = conexao.createStatement();
         stmt.execute("CREATE DATABASE IF NOT EXISTS curso_java");
 
