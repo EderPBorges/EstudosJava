@@ -14,8 +14,8 @@ public class ConsultarPessoa2 {
 
 
         PreparedStatement stmt = conexao.prepareStatement(sql);
-        stmt.setString(1, "%" + pesquisa + "&");
-        ResultSet resultado = stmt.executeQuery(sql);
+        stmt.setString(1, "%" + pesquisa + "%");
+        ResultSet resultado = stmt.executeQuery();
 
         List<Pessoa> pessoas = new ArrayList<>();
 

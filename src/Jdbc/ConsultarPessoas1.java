@@ -15,6 +15,7 @@ public class ConsultarPessoas1 {
         String sql = "SELECT * FROM pessoas";
 
         Statement stmt = conexao.createStatement();
+        //ResultSet resultado = stmt.executeQuery(sql);
         ResultSet resultado = stmt.executeQuery(sql);
 
         List<Pessoa> pessoas = new ArrayList<>();
